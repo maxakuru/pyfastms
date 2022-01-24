@@ -1,0 +1,15 @@
+.DS_Store
+.cproject
+.project
+images/video_frames
+images_output
+tmp
+main
+examples/matlab/*.mexmaci64
+examples/matlab/*.mexa64
+__pycache__/
+*.egg-info
+dist/
+examples/
+build/
+images/

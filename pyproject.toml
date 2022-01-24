@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "fastms"
+version = "0.1"
+description = "fastms Python bindings"
+readme = "README.rst"
+authors = ["Max Edell"]
+license = "GPL"
+keywords = ["fastms", "graphics", "segmentation", "optimization"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License (GPL)",
+    "Natural Language :: English",
+    "Programming Language :: Cython",
+    "Programming Language :: Python",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Multimedia :: Graphics :: Graphics Conversion"
+]
+include = [
+    "fastms/_solver.pxd",
+    "fastms/_solver.pyx",
+    "fastms/__init__.py"
+]
+
+[tool.poetry.build]
+script = "build.py"
+generate-setup-file = true
+
+[tool.poetry.scripts]
+test = "scripts:test"
+
+[tool.poetry.dependencies]
+python = ">=3.9.8"
+numpy = "1.20.0"
+
+[tool.poetry.dev-dependencies]
+Cython = "*"
+Pillow = "*"
+nose = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "wheel", "setuptools", "Cython", "numpy"]
+build-backend = "poetry.core.masonry.api"

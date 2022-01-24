@@ -1,0 +1,14 @@
+include README.rst
+include LICENSE
+include GPL
+include MANIFEST.in
+include cysetuptools.py
+
+recursive-exclude fastms *.py *.pyx *.pxd
+recursive-include fastms *.py
+
+include fastms/_solver.pyx
+include fastms/_solver.pxd
+
+recursive-exclude fastms *.c *.cpp
+recursive-exclude tests *
